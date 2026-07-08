@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;  
+  font-weight: 500;
+  overflow: hidden;
+}
+
+a, button, input {
+  all: unset;
+}
+
+.web-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.navbar { 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: hsl(352, 92%, 55%);
+  line-height: 1;
+  color: white;
+  font-size: clamp(1.5rem, calc(1.2rem + 1vw), 2.5rem);
+}
+
+.logo {
+  padding: min(1.618rem, 3.236%) min(1rem, 2%);  
+  cursor: pointer;
+}
+
+.menu-btn {
+  padding: min(1.618rem, 3.236%) min(1rem, 2%);  
+}
+
+.menu-btn:hover ~ .sidebar, .sidebar:hover {
+  transform: translateX(0);
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 100vh;
+  background-color: hsl(352, 92%, 45%);
+  color: white;
+  transform: translateX(100%);
+  transition: 200ms ease-in-out;
+}
+
+.sidebar h1 {
+  padding: min(1.618rem, 3.236vw) min(1rem, 2vw);
+  line-height: 1;
+  font-size: clamp(2.5rem, calc(2rem + 1vw), 3.5rem);
+  cursor: default;
+}
+
+.sidebar li {
+  padding: min(1.618rem, 3.236vw) min(1rem, 2vw);
+  font-size: clamp(1.5rem, calc(1rem + 1vw), 2.5rem);
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: hsl(352, 85%, 40%);
+}
